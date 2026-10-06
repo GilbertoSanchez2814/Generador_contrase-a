@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas Seguras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="badge">🔐 SEGURIDAD DIGITAL</div>
+      <h1>Generador de Contraseñas Seguras</h1>
+      <p class="intro">Genera una contraseña aleatoria siguiendo las recomendaciones del manual de Hacker Mentor.</p>
+
+      <div class="password-box">
+        <input id="password" type="text" readonly aria-label="Contraseña generada">
+        <button id="copyBtn" type="button">Copiar</button>
+      </div>
+
+      <div class="strength-row">
+        <span>Seguridad:</span>
+        <strong id="strengthText">Muy segura</strong>
+      </div>
+      <div class="meter"><div id="meterBar"></div></div>
+
+      <div class="settings">
+        <label for="length">Longitud: <strong id="lengthValue">16</strong> caracteres</label>
+        <input id="length" type="range" min="12" max="32" value="16">
+
+        <div class="options">
+          <label><input id="lowercase" type="checkbox" checked> Minúsculas (a-z)</label>
+          <label><input id="uppercase" type="checkbox" checked> Mayúsculas (A-Z)</label>
+          <label><input id="numbers" type="checkbox" checked> Números (0-9)</label>
+          <label><input id="symbols" type="checkbox" checked> Símbolos (!@#$...)</label>
+        </div>
+
+        <button id="generateBtn" class="generate" type="button">Generar contraseña segura</button>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+
+    <section class="card info">
+      <h2>Recomendaciones</h2>
+      <div class="recommendations">
+        <p>✓ Usa <strong>12 caracteres o más</strong>.</p>
+        <p>✓ Combina mayúsculas, minúsculas, números y símbolos.</p>
+        <p>✓ No uses nombres, fechas o palabras fáciles de adivinar.</p>
+        <p>✓ Utiliza una contraseña diferente para cada cuenta.</p>
+        <p>✓ Considera utilizar un gestor de contraseñas y activar 2FA.</p>
+      </div>
+      <p class="note">Las contraseñas se generan directamente en tu navegador y no se envían a ningún servidor.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
